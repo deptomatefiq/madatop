@@ -99,6 +99,7 @@ footer { background: #2d3748; color: #cbd5e0; padding: 60px 20px 40px; text-alig
             📍 Facultad de Ingeniería Química (FIQ-UNL), <br> Santiago del Estero 2829, Santa Fe
         </div>
         <!-- <a href="#preinscripcion" class="cta-button">¡Me interesa! Quiero inscribirme</a> -->
+         <a href="#cronograma" class="cta-button">Cronograma general</a>
     </div>
 </section>
 
@@ -241,46 +242,169 @@ En una primera etapa se estudiarán las funciones peso junto a algunas de sus pr
         </details>
     </section>
 
-<section class="section">
-        <h2>Cronograma por día</h2>
-<p style="margin-bottom: 30px;">Hacé clic en cada día para ver los horarios:</p>
-        <details>
-            <summary>📅 Día 1 - Jueves 7 de Mayo (Análisis Armónico y Lógica Algebraica)</summary>
-            <div style="padding: 0 25px 20px;">
-                <div class="bloque"><div class="bloque-horario">🌅 9:00 - 10:30 | Análisis Armónico (primera parte)</div></div>
-                <div class="bloque">☕ 10:30 - 11:00 | Coffee Break</div>
-                <div class="bloque"><div class="bloque-horario">🌅 11:00 - 12:30 | Lógica Algebraica (primera parte)</div></div>
-                <div class="bloque">🍽️ 12:30 - 14:00 | Almuerzo</div>
-                <div class="bloque"><div class="bloque-horario">🌆 14:00 - 15:30 | Análisis Armónico (segunda parte)</div></div>
-                <div class="bloque">☕ 15:30 - 16:00 | Coffee Break</div>
-                <div class="bloque"><div class="bloque-horario">🌆 16:00 - 17:30 | Lógica Algebraica (segunda parte)</div></div>
-            </div>
-        </details>
-        <details>
-            <summary>📅 Día 2 - Viernes 8 de Mayo (Datos y Estadística)</summary>
-            <div style="padding: 0 25px 20px;">
-                <div class="bloque"><div class="bloque-horario">🌅 9:00 - 10:30 | Datos (primera parte)</div></div>
-                <div class="bloque">☕ 10:30 - 11:00 | Coffee Break</div>
-                <div class="bloque"><div class="bloque-horario">🌅 11:00 - 12:30 | Estadística (primera parte)</div></div>
-                <div class="bloque">🍽️ 12:30 - 14:30 | Almuerzo</div>
-                <div class="bloque"><div class="bloque-horario">🌆 14:30 - 16:00 | Datos (segunda parte)</div></div>
-                <div class="bloque">☕ 16:00 - 16:30 | Coffee Break</div>
-                <div class="bloque"><div class="bloque-horario">🌆 16:30 - 18:00 | Estadística (segunda parte)</div></div>
-            </div>
-        </details>
-        <details>
-            <summary>📅 Día 3 - Sábado 9 de Mayo (Análisis Numérico y Optimización)</summary>
-            <div style="padding: 0 25px 20px;">
-                <div class="bloque"><div class="bloque-horario">🌅 9:00 - 10:30 | Análisis Numérico (primera parte)</div></div>
-                <div class="bloque">☕ 10:30 - 11:00 | Coffee Break</div>
-                <div class="bloque"><div class="bloque-horario">🌅 11:00 - 12:30 | Optimización (primera parte)</div></div>
-                <div class="bloque">🍽️ 12:30 - 14:30 | Almuerzo</div>
-                <div class="bloque"><div class="bloque-horario">🌆 14:30 - 16:00 | Análisis Numérico (segunda parte)</div></div>
-                <div class="bloque">☕ 16:00 - 16:30 | Coffee Break</div>
-                <div class="bloque"><div class="bloque-horario">🌆 16:30 - 18:00 | Optimización (segunda parte)</div></div>
-            </div>
-        </details>
-    </section>
+
+
+<section class="section" id="cronograma">
+ <!-- SECCIÓN 1: CRONOGRAMA GENERAL (TABLA RESUMEN) -->
+  <h2>Cronograma general</h2>
+  <details style="margin-bottom: 20px; border: 1px solid #ddd; border-radius: 8px; overflow: hidden;" open>
+    <summary style="padding: 15px; background-color: #f8f9fa; cursor: pointer; font-weight: bold; font-size: 1.2em;">
+      📋 Resumen de Horarios
+    </summary>
+    <div style="padding: 20px; overflow-x: auto;">
+      <style>
+        .tabla-cronograma { width: 100%; border-collapse: collapse; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; font-size: 14px; }
+        .tabla-cronograma th { background-color: #343a40; color: white; padding: 12px; text-align: left; border: 1px solid #dee2e6; }
+        .tabla-cronograma td { padding: 12px; border: 1px solid #dee2e6; vertical-align: top; }
+        .horario-celda { display: block; font-weight: bold; color: #495057; margin-bottom: 4px; font-size: 0.95em; }
+        .celda-vacia { background-color: #f8f9fa; }
+        /* Colores por índole */
+        .cat-academico { background-color: #e7f3ff; border-left: 5px solid #0d6efd; } /* Azul */
+        .cat-social { background-color: #fff3cd; border-left: 5px solid #ffc107; }    /* Amarillo */
+        .cat-comida { background-color: #d1e7dd; border-left: 5px solid #198754; }    /* Verde */
+        .cat-admin { background-color: #f8d7da; border-left: 5px solid #dc3545; }     /* Rojo */
+      </style>
+      <table class="tabla-cronograma">
+        <thead>
+          <tr>
+            <th>Bloque</th>
+            <th>Jueves 7/05</th>
+            <th>Viernes 8/05</th>
+            <th>Sábado 9/05</th>
+          </tr>
+        </thead>
+        <tbody>
+          <tr>
+            <td><strong>Acreditación</strong></td>
+            <td class="cat-admin"><span class="horario-celda">08:00 - 09:00</span>📝 Acreditación</td>
+            <td class="celda-vacia"></td>
+            <td class="celda-vacia"></td>
+          </tr>
+          <tr>
+            <td><strong>Mañana I</strong></td>
+            <td class="cat-academico"><span class="horario-celda">09:00 - 10:30</span>📖 Análisis Armónico I</td>
+            <td class="cat-academico"><span class="horario-celda">09:00 - 10:30</span>📊 Datos I</td>
+            <td class="cat-academico"><span class="horario-celda">09:00 - 10:30</span>🔢 Análisis Numérico I</td>
+          </tr>
+          <tr>
+            <td><strong>Coffee Break</strong></td>
+            <td class="cat-comida"><span class="horario-celda">10:30 - 11:00</span>☕ Coffee Break</td>
+            <td class="cat-comida"><span class="horario-celda">10:30 - 11:00</span>☕ Coffee Break</td>
+            <td class="cat-comida"><span class="horario-celda">10:30 - 11:00</span>☕ Coffee Break</td>
+          </tr>
+          <tr>
+            <td><strong>Mañana II</strong></td>
+            <td class="cat-academico"><span class="horario-celda">11:00 - 12:30</span>📐 Lógica Algebraica I</td>
+            <td class="cat-academico"><span class="horario-celda">11:00 - 12:30</span>📉 Estadística I</td>
+            <td class="cat-academico"><span class="horario-celda">11:00 - 12:30</span>📈 Optimización I</td>
+          </tr>
+          <tr>
+            <td><strong>Mediodía</strong></td>
+            <td class="cat-social"><span class="horario-celda">12:30 - 13:00</span>🎲 Actividad Lúdica</td>
+            <td class="cat-admin"><span class="horario-celda">12:30 - 13:00</span>🎓 Becas y Posgrados</td>
+            <td class="cat-comida" rowspan="2"><span class="horario-celda">12:30 - 14:30</span>🍽️ Almuerzo (Incluido)</td>
+          </tr>
+          <tr>
+            <td><strong>Almuerzo</strong></td>
+            <td class="cat-comida"><span class="horario-celda">13:00 - 14:00</span>🍽️ Almuerzo</td>
+            <td class="cat-comida"><span class="horario-celda">13:00 - 14:30</span>🍽️ Almuerzo</td>
+          </tr>
+          <tr>
+            <td><strong>Tarde I</strong></td>
+            <td class="cat-academico"><span class="horario-celda">14:00 - 15:30</span>📖 Análisis Armónico II</td>
+            <td class="cat-academico"><span class="horario-celda">14:30 - 16:00</span>📊 Datos II</td>
+            <td class="cat-academico"><span class="horario-celda">14:30 - 16:00</span>🔢 Análisis Numérico II</td>
+          </tr>
+          <tr>
+            <td><strong>Coffee Break</strong></td>
+            <td class="cat-comida"><span class="horario-celda">15:30 - 16:00</span>☕ Coffee Break</td>
+            <td class="cat-comida"><span class="horario-celda">16:00 - 16:30</span>☕ Coffee Break</td>
+            <td class="cat-comida"><span class="horario-celda">16:00 - 16:30</span>☕ Coffee Break</td>
+          </tr>
+          <tr>
+            <td><strong>Tarde II</strong></td>
+            <td class="cat-academico"><span class="horario-celda">16:00 - 17:30</span>📐 Lógica Algebraica II</td>
+            <td class="cat-academico"><span class="horario-celda">16:30 - 18:00</span>📉 Estadística II</td>
+            <td class="cat-academico"><span class="horario-celda">16:30 - 18:00</span>📈 Optimización II</td>
+          </tr>
+          <tr>
+            <td><strong>Noche</strong></td>
+            <td class="cat-social">
+              <span class="horario-celda">18:00</span>🍺 Cervecería Santa Fe<br><br>
+              <span class="horario-celda">19:30</span>🥂 Brindis El Patio
+            </td>
+            <td class="cat-social"><span class="horario-celda">20:00</span>🧀 Brindis (Club Sarmiento)</td>
+            <td class="celda-vacia"></td>
+          </tr>
+        </tbody>
+      </table>
+    </div>
+  </details>
+
+  <h2>Cronograma por día</h2>
+  <p style="margin-bottom: 30px;">Hacé clic en cada día para ver los detalles específicos:</p>
+
+  <details>
+    <summary>📅 Día 1 - Jueves 7 de Mayo (Análisis Armónico y Lógica Algebraica)</summary>
+    <div style="padding: 0 25px 20px;">
+      <div class="bloque"><div class="bloque-horario">📝 08:00 - 09:00 | Acreditación</div></div>
+      <div class="bloque"><div class="bloque-horario">🌅 09:00 - 10:30 | Análisis Armónico (primera parte)</div></div>
+      <div class="bloque">☕ 10:30 - 11:00 | Coffee Break</div>
+      <div class="bloque"><div class="bloque-horario">🌅 11:00 - 12:30 | Lógica Algebraica (primera parte)</div></div>
+      <div class="bloque" style="background-color: #fff3cd; border-radius: 4px; padding: 10px;">
+        <strong>🎲 12:30 - 13:00 | Actividad lúdica optativa</strong><br>
+        <small>Lugar: Afuera, en la ochava de Santiago del Estero y 9 de Julio.</small>
+      </div>
+      <div class="bloque">🍽️ 13:00 - 14:00 | Almuerzo</div>
+      <div class="bloque"><div class="bloque-horario">🌆 14:00 - 15:30 | Análisis Armónico (segunda parte)</div></div>
+      <div class="bloque">☕ 15:30 - 16:00 | Coffee Break</div>
+      <div class="bloque"><div class="bloque-horario">🌆 16:00 - 17:30 | Lógica Algebraica (segunda parte)</div></div>
+      <div class="bloque" style="border: 1px solid #ffc107; border-radius: 4px; padding: 10px; margin-top: 10px;">
+        <strong>🍺 18:00 | Visita a la Cervecería Santa Fe</strong><br>
+        <small>Recorrido histórico y proceso de elaboración (Gratuita). Cupos limitados, reservar al momento de la acreditación. 
+        <a href="https://www.paseodelacerveceria.com.ar/" target="_blank">Web de la Cervecería</a></small><br>
+        <strong>🥂 19:30 | Brindis en El Patio de la Cervecería</strong><br>
+        <small>Incluye un liso. Posibilidad de comprar comida y bebida extra.</small>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>📅 Día 2 - Viernes 8 de Mayo (Datos y Estadística)</summary>
+    <div style="padding: 0 25px 20px;">
+      <div class="bloque"><div class="bloque-horario">🌅 09:00 - 10:30 | Datos (primera parte)</div></div>
+      <div class="bloque">☕ 10:30 - 11:00 | Coffee Break</div>
+      <div class="bloque"><div class="bloque-horario">🌅 11:00 - 12:30 | Estadística (primera parte)</div></div>
+      <div class="bloque" style="background-color: #e7f3ff; border-radius: 4px; padding: 10px;">
+        <strong>🎓 12:30 - 13:00 | Becas y posgrados (Actividad optativa)</strong><br>
+        <small>Oportunidades académicas después de la graduación.</small>
+      </div>
+      <div class="bloque">🍽️ 13:00 - 14:30 | Almuerzo</div>
+      <div class="bloque"><div class="bloque-horario">🌆 14:30 - 16:00 | Datos (segunda parte)</div></div>
+      <div class="bloque">☕ 16:00 - 16:30 | Coffee Break</div>
+      <div class="bloque"><div class="bloque-horario">🌆 16:30 - 18:00 | Estadística (segunda parte)</div></div>
+      <div class="bloque" style="border: 1px solid #dc3545; border-radius: 4px; padding: 10px; margin-top: 10px;">
+        <strong>🧀 20:00 | Brindis y picada en el Club Sarmiento</strong><br>
+        <small>Cierre de jornada. Confirmar asistencia al acreditarse. Incluye tabla de quesos; se puede comprar o llevar bebida/comida extra.</small>
+      </div>
+    </div>
+  </details>
+
+  <details>
+    <summary>📅 Día 3 - Sábado 9 de Mayo (Análisis Numérico y Optimización)</summary>
+    <div style="padding: 0 25px 20px;">
+      <div class="bloque"><div class="bloque-horario">🌅 9:00 - 10:30 | Análisis Numérico (primera parte)</div></div>
+      <div class="bloque">☕ 10:30 - 11:00 | Coffee Break</div>
+      <div class="bloque"><div class="bloque-horario">🌅 11:00 - 12:30 | Optimización (primera parte)</div></div>
+      <div class="bloque">🍽️ 12:30 - 14:30 | Almuerzo <strong>(Incluido para todos los participantes)</strong><br>
+      <small>Confirmar asistencia al momento de acreditarse.</small></div>
+      <div class="bloque"><div class="bloque-horario">🌆 14:30 - 16:00 | Análisis Numérico (segunda parte)</div></div>
+      <div class="bloque">☕ 16:00 - 16:30 | Coffee Break</div>
+      <div class="bloque"><div class="bloque-horario">🌆 16:30 - 18:00 | Optimización (segunda parte)</div></div>
+    </div>
+  </details>
+</section>
+
 
 <section class="section">
     <h2>Información Importante</h2>
@@ -290,7 +414,7 @@ En una primera etapa se estudiarán las funciones peso junto a algunas de sus pr
         <div>
             <div style="margin-bottom: 25px;">
                 <h3>📜 Certificados</h3>
-                <p>Se entregarán certificados de asistencia a todos los participantes.</p>
+                <p>Se entregarán certificados de asistencia a todos los participantes. Una vez terminada la Escuela, te indicaremos aquí cómo obtener tu certificado.</p>
             </div>
 
         <div style="margin-bottom: 25px;">
@@ -356,8 +480,63 @@ En una primera etapa se estudiarán las funciones peso junto a algunas de sus pr
         </a>
     </div>
 </section>
-
 </div>
+
+<!-- SECCIÓN 3: AGRADECIMIENTOS / SPONSORS -->
+<hr style="border: 0; border-top: 1px solid #eee; margin: 40px 0;">
+
+<div style="text-align: center; padding: 20px; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;">
+  <h3 style="color: #495057; margin-bottom: 25px; font-weight: 600;">Agradecemos el apoyo de:</h3>
+  
+  <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 30px; align-items: center;">
+    
+    <!-- FIQ -->
+    <a href="https://www.fiq.unl.edu.ar/" target="_blank" style="text-decoration: none;">
+      <div class="sponsor-card" style="width: 200px; min-height: 120px; padding: 20px; border-radius: 12px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <!-- Si tienes el archivo local, cambia el src por: src="img/logo-fiq.png" -->
+        <img src="FIQ.png" 
+             alt="FIQ - UNL" 
+             style="max-width: 100%; max-height: 80px; object-fit: contain; margin-bottom: 10px;"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        
+        <!-- Texto de respaldo si la imagen falla -->
+        <span style="display: none; font-size: 1.1em; font-weight: bold; color: #004a8e;">FACULTAD DE INGENIERÍA QUÍMICA</span>
+      </div>
+    </a>
+
+    <!-- Tregar -->
+    <a href="https://www.tregar.com.ar/" target="_blank" style="text-decoration: none;">
+      <div class="sponsor-card" style="width: 200px; min-height: 120px; padding: 20px; border-radius: 12px; background: #fff; box-shadow: 0 4px 12px rgba(0,0,0,0.08); display: flex; flex-direction: column; align-items: center; justify-content: center;">
+        <!-- Si tienes el archivo local, cambia el src por: src="img/logo-tregar.png" -->
+        <img src="tregar.png" 
+             alt="Tregar" 
+             style="max-width: 90%; max-height: 80px; object-fit: contain; margin-bottom: 10px;"
+             onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+        
+        <!-- Texto de respaldo si la imagen falla -->
+        <span style="display: none; font-size: 1.5em; font-weight: bold; color: #d32f2f;">Tregar</span>
+      </div>
+    </a>
+
+    <!-- Sponsor Oculto -->
+    <div style="display: none; width: 200px; height: 120px; padding: 20px; border-radius: 12px; background: #fdfdfd; border: 2px dashed #ccc; flex-direction: column; align-items: center; justify-content: center;">
+      <span style="font-weight: bold; color: #aaa;">Próximamente</span>
+    </div>
+
+  </div>
+</div>
+
+<style>
+  .sponsor-card { transition: all 0.3s ease; border: 1px solid #f0f0f0; }
+  .sponsor-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15) !important;
+    border-color: #e0e0e0;
+  }
+</style>
+
+
+
 
 <footer>
     <div class="footer-container">
